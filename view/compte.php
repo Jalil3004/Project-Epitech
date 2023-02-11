@@ -59,6 +59,7 @@ if (isset($_SESSION["email"])){
 
 ?>
 <td><a href="edit.php?id=<?=$_SESSION["email"]?>">modifier</a></td>
+<td><a href="delete.php?id=<?=$_SESSION["email"]?>">supprimer</a></td>
    <table>
   <tr>
     <td>

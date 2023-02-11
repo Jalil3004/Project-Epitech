@@ -27,7 +27,7 @@ class MyDataBase{
         extract($_POST);
        
             $mdp=password_hash($mdp,PASSWORD_DEFAULT);
-        $statement=  $this->db->prepare("INSERT INTO users  VALUES (null,?,?,?,?,?,?,?,?)"); // donc en PDO je prepare une requete qui renvoie un object du coup
+        $statement=  $this->db->prepare("INSERT INTO users  VALUES (null,?,?,?,?,?,?,?,?,'active')"); // donc en PDO je prepare une requete qui renvoie un object du coup
         //je dois l'executer ensuite avec execute (Prépare une requête SQL à être exécutée par la méthode PDOStatement::execute())
         $statement ->execute([$email,$mdp,$prenom,$nom,$genre,$age,$city,$hobbi]);
         $_SESSION["email"]=$email;

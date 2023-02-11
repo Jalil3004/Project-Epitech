@@ -24,7 +24,7 @@ class MyConnect{
 
 public function connect_user(){
     extract($_POST);
-        $statement=  $this->db->query("SELECT * FROM users WHERE email ='$email'"); // donc en PDO je prepare une requete qui renvoie un object du coup
+        $statement=  $this->db->query("SELECT * FROM users WHERE email ='$email' AND statut = 'active'"); // donc en PDO je prepare une requete qui renvoie un object du coup
         //je dois l'executer ensuite avec execute (Prépare une requête SQL à être exécutée par la méthode PDOStatement::execute())
       
         if($statement ->rowCount() > 0){
