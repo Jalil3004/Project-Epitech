@@ -1,0 +1,23 @@
+:)
+
+Programme du matin:
+1)Kahina essayera 20min de son coté 9:30
+2)On met en commun 
+3)liée les fonctions au inputs (get post extract)
+4)SI c'est bon on se renseigne AJax jquery (20min)
+5)On l'ajoute a nos fonctions
+6)Ordonner tout ca en MVC
+
+Fin de la matinée.
+
+
+Programme Après-midi:
+
+-html css des pages (20 min)
+-Commencement du projet 
+
+
+
+1)gere les erreur
+2) page du Compatible
+3)menu deroulant jquery
