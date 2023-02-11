@@ -42,7 +42,7 @@
           </div>
         </div>
       </nav>
-      <!-- <script src="../Ajax/ajaxprofil.js"></script> -->
+      <script src="../Ajax/ajaxdelete.js"></script>
     
  <?php
 if (isset($_SESSION["email"])){
@@ -58,8 +58,9 @@ if (isset($_SESSION["email"])){
 }
 
 ?>
+ <!-- <button type="submit" name="button" id="btndelete">supprimer</button> -->
 <td><a href="edit.php?id=<?=$_SESSION["email"]?>">modifier</a></td>
-<td><a href="delete.php?id=<?=$_SESSION["email"]?>">supprimer</a></td>
+<td><a href="" id="btndelete">supprimer</a></td>
    <table>
   <tr>
     <td>

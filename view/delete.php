@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php require_once("../model/bdddelete.php") ?>
+    
 </body>
 </html>
