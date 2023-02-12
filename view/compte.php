@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="inscription.css">
+    <link rel="stylesheet" href="profil.css">
     <title>Document</title>
 </head>
 <body>
@@ -44,7 +44,7 @@
       </nav>
       <script src="../Ajax/ajaxdelete.js"></script>
     
- <?php
+ <!-- <?php
 if (isset($_SESSION["email"])){
 
   echo $_SESSION["lastname"] . "\n";;
@@ -57,10 +57,42 @@ if (isset($_SESSION["email"])){
 
 }
 
-?>
+?> -->
+<form    action="">
+          
+          <div class="title">
+            <i class="fas fa-pencil-alt"></i> 
+          <h2>Bienvenue :  <?=$_SESSION['lastname']?></h2>
+        </div>
+        <div class="info">
+        
+
+          <p>Lastname: <?=$_SESSION['lastname']?> </p><br>
+          <p>Firstname: <?=$_SESSION['firstname']?> </p><br>
+          <p>Age: <?=$_SESSION['age']?> </p><br>
+          <p>Genre: <?=$_SESSION['genre']?> </p><br>
+          <p>Email: <?=$_SESSION['email']?> </p><br>
+          <p>Hobbi: <?=$_SESSION['hobbi']?> </p><br>
+
+          <td><a href="edit.php?id=<?=$_SESSION["email"]?>">modifier</a></td>
+          <td><a href="" id="btndelete">supprimer</a></td>
+         
+        
+<!--          
+        <?php
+            if(isset($_SESSION["email"])){
+                echo "vous êtes connecté en tant que : ". $_SESSION["email"] ;
+            }
+        ?>
+           -->
+
+         
+        </div>
+       
+       
+      </form>
+
  <!-- <button type="submit" name="button" id="btndelete">supprimer</button> -->
-<td><a href="edit.php?id=<?=$_SESSION["email"]?>">modifier</a></td>
-<td><a href="" id="btndelete">supprimer</a></td>
    <table>
   <tr>
     <td>

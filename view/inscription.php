@@ -77,9 +77,9 @@
         <input type="password" id="mdp" name="mdp"><br>
          
         <label for="genre">Civilite</label>
-        <p><input type="radio" name="genre" value="m" checked>Homme
-        <input type="radio" name="genre" value="f">Femme
-        <input type="radio" name="genre" value="a">Autre<br>
+        <p><input type="radio" name="genre" value="Homme" checked>Homme
+        <input type="radio" name="genre" value="Femme">Femme
+        <input type="radio" name="genre" value="Autre">Autre<br>
         
         <label for="city">City</label>
         <input type="text" id="city" name="city"><br>
