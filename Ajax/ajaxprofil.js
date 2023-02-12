@@ -4,7 +4,14 @@
 
 
   //  console.log(form);
-  
+  $(".dropdown").hover(
+    function () {
+      $(".dropdown-content").show();
+    },
+    function () {
+      $(".dropdown-content").hide();
+    }
+  );
 
   $(function(){
     $("#btnedit").click(function(e){

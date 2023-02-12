@@ -19,16 +19,19 @@ $(function(){
       url:"../controler/main.php",
       data:ste,
       success:function(response){
-       
-       console.log(response);
-       if(ste.error){
-         alert(ste.error.message);
-       }
-       else{
-         alert ('Vous êtes inscrit');
-         location.href='../view/connexion.php';
+        let thetype = JSON.parse(response);
+        console.log(thetype.type);
+        if(thetype.type=='success'){
+          // alert(str.error.message);
+         alert (thetype.message);
          
-       }
+         location.href='../view/connexion.php';
+        }
+        else{
+          
+          alert (thetype.message);
+        }
+      
    
 
        //  diva.html(response);

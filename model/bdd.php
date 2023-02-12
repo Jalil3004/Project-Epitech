@@ -20,29 +20,29 @@ class MyDataBase{
         }
     }
 
-    public function add_user_to_db(){
-       
-       
-        
-        extract($_POST);
-       
-            $mdp=password_hash($mdp,PASSWORD_DEFAULT);
-        $statement=  $this->db->prepare("INSERT INTO users  VALUES (null,?,?,?,?,?,?,?,?,'active')"); // donc en PDO je prepare une requete qui renvoie un object du coup
-        //je dois l'executer ensuite avec execute (Prépare une requête SQL à être exécutée par la méthode PDOStatement::execute())
-        $statement ->execute([$email,$mdp,$prenom,$nom,$genre,$age,$city,$hobbi]);
-        $_SESSION["email"]=$email;
-        $_SESSION["firstname"]=$prenom;
-        $_SESSION["lastname"]=$nom;
-        $_SESSION["age"]=$age;
-        $_SESSION["genre"]=$genre;
-        $_SESSION["hobbi"]=$hobbi;
-        // echo json_encode(array("type" => "success", "message" => "connexion reussi","age" => $age));
-    
-    // else{
-    //     echo "erreur";
-    // }
-}
 
+public function add_user_to_db(){
+  if (!empty($_POST['email']) && !empty($_POST['mdp']) && !empty($_POST['prenom']) && !empty($_POST['nom']) && !empty($_POST['genre']) && !empty($_POST['age']) && !empty($_POST['city']) && !empty($_POST['hobbi'])) {
+    extract($_POST);
+    $mdp=password_hash($mdp,PASSWORD_DEFAULT);
+    $statement=  $this->db->prepare("INSERT INTO users  VALUES (null,?,?,?,?,?,?,?,?,'active')");
+    $statement ->execute([$email,$mdp,$prenom,$nom,$genre,$age,$city,$hobbi]);
+    $_SESSION["email"]=$email;
+    $_SESSION["firstname"]=$prenom;
+    $_SESSION["lastname"]=$nom;
+    $_SESSION["age"]=$age;
+    $_SESSION["genre"]=$genre;
+    $_SESSION["hobbi"]=$hobbi;
+             
+    http_response_code(200);
+    echo json_encode(array("type" => "success", "message" => "connexion reussi"));
+  } 
+  else {
+   
+             
+    echo json_encode(array("type" => "error", "message" => "remplir tout les champs"));
+  }
+}
 
 
 

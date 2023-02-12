@@ -1,3 +1,12 @@
+$(".dropdown").hover(
+  function () {
+    $(".dropdown-content").show();
+  },
+  function () {
+    $(".dropdown-content").hide();
+  }
+);
+
 $(function(){
     $("#btndelete").click(function(e){
      e.preventDefault();

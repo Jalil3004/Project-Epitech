@@ -32,11 +32,14 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown link
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <div class="dropdown">
+  <a href="#">Menu déroulant</a>
+  <div class="dropdown-content">
+    <a href="#">Lien 1</a>
+    <a href="#">Lien 2</a>
+    <a href="#">Lien 3</a>
+  </div>
+</div>
               </li>
             </ul>
           </div>
@@ -58,7 +61,7 @@ if (isset($_SESSION["email"])){
 }
 
 ?> -->
-<form    action="">
+<!-- <form    action="">
           
           <div class="title">
             <i class="fas fa-pencil-alt"></i> 
@@ -74,36 +77,47 @@ if (isset($_SESSION["email"])){
           <p>Email: <?=$_SESSION['email']?> </p><br>
           <p>Hobbi: <?=$_SESSION['hobbi']?> </p><br>
 
-          <td><a href="edit.php?id=<?=$_SESSION["email"]?>">modifier</a></td>
           <td><a href="" id="btndelete">supprimer</a></td>
-         
+          
         
-<!--          
-        <?php
-            if(isset($_SESSION["email"])){
-                echo "vous êtes connecté en tant que : ". $_SESSION["email"] ;
-            }
-        ?>
-           -->
-
-         
-        </div>
-       
-       
-      </form>
-
- <!-- <button type="submit" name="button" id="btndelete">supprimer</button> -->
-   <table>
-  <tr>
-    <td>
+          
+        -->
+        
+        
+        <!-- </div>
+        
+        
+      </form>   -->
       
-    </td>
+      <div class="container">
+        
+        <div class="card">
+          <img src="https://lh3.googleusercontent.com/oUUiPB9sq3ACq4bUaRmo8pgvC4FUpRRrQKcGIBSOsafawZfRpF1vruFeYt6uCfL6wGDQyvOi6Ez9Bpf1Fb7APKjIyVsft7FLGR6QqdRFTiceNQBm1In9aZyrXp33cZi9pUNqjHASdA=s170-no" alt="" class="card__image">
+          <p class="card__name"><?=$_SESSION['lastname']?> <?=$_SESSION['firstname']?> </p>
+          <div class="grid-container">
+            
+            
+            <p>Lastname: <?=$_SESSION['lastname']?> </p><br>
+            <p>Firstname: <?=$_SESSION['firstname']?> </p><br>
+            <p>Age: <?=$_SESSION['age']?> </p><br>
+            <p>Genre: <?=$_SESSION['genre']?> </p><br>
+            <p>Email: <?=$_SESSION['email']?> </p><br>
+            <p>Hobbi: <?=$_SESSION['hobbi']?> </p><br>
+          </div>
+          
+          <button class="btn draw-border"><a href="edit.php?id=<?=$_SESSION["email"]?>">Edit</a></button>
+          <button class="btn draw-border" id="btndelete" >Delete </button>
+          <button class="btn draw-border" >
+          <a href="../view/search.php">Search</a>
+        </button>
 
-  </tr>
-
-
-   </table>
+          
+          
+          <!-- <td><a href="edit.php?id=<?=$_SESSION["email"]?>">modifier</a></td> -->
+  </div>
   
+</div>
+
 
 
     
