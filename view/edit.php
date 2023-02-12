@@ -36,7 +36,7 @@
     </div>
     <div class="user-box">
     <label for="nom">Age</label>
-    <input type="text" id="name" name="age" >
+    <input type="date" id="name" name="age" >
     </div>
     <div class="user-box">
     <label for="nom">Genre</label>
