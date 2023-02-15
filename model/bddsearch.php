@@ -23,19 +23,29 @@ class MySearch{
     public function search_user_to_db(){
         extract($_POST);
         // $themail = $_SESSION["email"];
+    
        $age =explode("-",$age);
        $age_min=$age[0];
        $age_max=$age[1];
        
 
         
-        $statement=  $this->db->prepare("SELECT * FROM users WHERE (city='$city' OR  gender='$genre' OR age BETWEEN '$age_min' AND '$age_max' OR hobbi ='$Hobbi' OR hobbi='$otherhobbi') OR (city='$city' AND  gender='$genre' AND age BETWEEN '$age_min' AND '$age_max' AND hobbi ='$Hobbi' AND hobbi='$otherhobbi')"); // donc en PDO je prepare une requete qui renvoie un object du coup
+        $statement=  $this->db->prepare("SELECT * FROM users WHERE (gender='$genre' AND city='$city'  AND  age BETWEEN '$age_min' AND '$age_max' AND hobbi ='$Hobbi' OR hobbi='$otherhobbi') 
+        OR  (gender='$genre' AND city='$city'  AND  age BETWEEN '$age_min' AND '$age_max')
+        OR (gender='$genre' AND city='$city' )
+        OR (gender='$genre')
+        OR  (gender='$genre' AND age BETWEEN '$age_min' AND '$age_max' AND city='$city'  )
+        OR (gender='$genre' AND age BETWEEN '$age_min' AND '$age_max' )
+        OR  (gender='$genre' AND hobbi ='$Hobbi' AND age BETWEEN '$age_min' AND '$age_max' AND city='$city'  )
+        OR  (gender='$genre' AND hobbi ='$Hobbi' AND age BETWEEN '$age_min' AND '$age_max' AND city='$city' )
+     OR (city='$city') OR (age BETWEEN '$age_min' AND '$age_max') OR (hobbi ='$Hobbi' OR hobbi='$otherhobbi')
+     "); // donc en PDO je prepare une requete qui renvoie un object du coup
         //je dois l'executer ensuite avec execute (Prépare une requête SQL à être exécutée par la méthode PDOStatement::execute())
         
         $statement ->execute();
         $resultat = $statement->fetchAll();
         $_SESSION['res']=$resultat;
-        
+      
         
         
         // $row = mysqli_fetch_assoc($req);
@@ -68,6 +78,9 @@ class MySearch{
 }
 
 }
+// $data = new MySearch();
+// $data->connect_to_db("root","epitech");
+// $data->search_user_to_db();
 
 
 ?>

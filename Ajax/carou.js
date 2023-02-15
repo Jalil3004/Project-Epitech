@@ -28,47 +28,47 @@ $(document).ready(function() {
         }
       );
       
-$(function(){
-  $("#thebtnsearch").click(function(e){
-   e.preventDefault();
-    var form = $('#formsearch');
-    var ste = form.serialize();
+// $(function(){
+//   $(document).on('click', "#thebtnsearch", function(e){
+//    e.preventDefault();
+//     var form = $('#formsearch');
+//     var ste = form.serialize();
 
-    // Préparation des données à envoyer avec la requête AJAX
+//     // Préparation des données à envoyer avec la requête AJAX
 
-   //  var diva = $('#divaa');
-   //  var status= $('#statuss');
-    $.ajax({
-      type:"POST",
-      url:"../controler/mainsearch.php",
-      data: ste,
-      success:function(response){
+//    //  var diva = $('#divaa');
+//    //  var status= $('#statuss');
+//     $.ajax({
+//       type:"POST",
+//       url:"../controler/mainsearch.php",
+//       data: ste,
+//       success:function(response){
        
-       console.log(response);
-       if(ste.error){
-         alert(ste.error.message);
-       }
-       else{
+//        console.log(response);
+//        if(ste.error){
+//          alert(ste.error.message);
+//        }
+//        else{
         
         
          
-       }
+//        }
    
 
-       //  diva.html(response);
-       //  status.text('Posté');
+//        //  diva.html(response);
+//        //  status.text('Posté');
        
         
-      },
-      error: function( xhr, status, error ) {
-       // status.text('Erreur pour poster le formulaire : '+ response.status + " " + response.statusText);
-       console.log(xhr, status, error);
-       alert(error);
-      }				
-        } );
-  });
+//       },
+//       error: function( xhr, status, error ) {
+//        // status.text('Erreur pour poster le formulaire : '+ response.status + " " + response.statusText);
+//        console.log(xhr, status, error);
+//        alert(error);
+//       }				
+//         } );
+//   });
 
-});	
+// });	
 
   });
 

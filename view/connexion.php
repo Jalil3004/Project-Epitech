@@ -1,4 +1,4 @@
-
+<?php session_start()  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,13 +70,13 @@
          
         <label for="mdp">Mot de passe</label>
         <input type="password" id="mdp" name="mdp"><br>
-         
+<!--          
         <?php
             if(isset($_SESSION["email"])){
                 echo "vous êtes connecté en tant que : ". $_SESSION["email"] ;
             }
         ?>
-          
+           -->
 
          
         </div>

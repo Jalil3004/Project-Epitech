@@ -25,10 +25,9 @@ public function add_user_to_db(){
   if (!empty($_POST['email']) && !empty($_POST['mdp']) && !empty($_POST['prenom']) && !empty($_POST['nom']) && !empty($_POST['genre']) && !empty($_POST['age']) && !empty($_POST['city']) && !empty($_POST['hobbi'])) {
     extract($_POST);
     $mdp=password_hash($mdp,PASSWORD_DEFAULT);
-    $today = new DateTime();
-    $birthdate = new DateTime($age);
-    $interval = $today->diff($birthdate);
-    if ($interval->y >= 18) {
+   
+ 
+    if ($age >= 18) {
     $statement=  $this->db->prepare("INSERT INTO users  VALUES (null,?,?,?,?,?,?,?,?,'active')");
     $statement ->execute([$email,$mdp,$prenom,$nom,$genre,$age,$city,$hobbi]);
     $_SESSION["email"]=$email;
@@ -37,6 +36,7 @@ public function add_user_to_db(){
     $_SESSION["age"]=$age;
     $_SESSION["genre"]=$genre;
     $_SESSION["hobbi"]=$hobbi;
+    $_SESSION["city"]=$city;
              
     http_response_code(200);
     echo json_encode(array("type" => "success", "message" => "connexion reussi"));

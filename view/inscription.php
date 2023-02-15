@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,7 +86,7 @@
         <input type="text" id="city" name="city"><br>
         
         <label for="age">Age</label>
-        <input type="date" id="age" name="age"><br>
+        <input type="text" id="age" name="age"><br>
 
         <label for="Hobbies">Hobbies</label>
         <input type="text" id="hobbi" name="hobbi"><br>

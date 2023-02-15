@@ -38,6 +38,7 @@ public function connect_user(){
                
         http_response_code(200);
         echo json_encode(array("type" => "success", "message" => "connexion reussi", "email" => $email));
+      
         
        
         // while($row = $statement->fetch()) {

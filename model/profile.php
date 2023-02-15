@@ -30,25 +30,25 @@ class MyEdit{
               //extraction des informations envoyé dans des variables par la méthode POST
               extract($_POST);
               //verifier que tout les champs ont été remplis
-              if (isset($firstname) ){
+              if (!empty($_POST['email']) && !empty($_POST['pass']) && !empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['genre']) && !empty($_POST['age']) && !empty($_POST['city']) && !empty($_POST['hobbi'])){
                 $pass=password_hash($pass,PASSWORD_DEFAULT);
                   //requete de modification
                   $req= $this->db->query(" UPDATE users SET pass ='$pass',firstname ='$firstname',email='$email',hobbi='$hobbi',age='$age',gender='$genre',lastname='$lastname' WHERE email='" . $themail . "'");
-                  if($req){ //si la requête a été effectuée avec succès , on fait une redirection
+                  //si la requête a été effectuée avec succès , on fait une redirection
                     $_SESSION["email"]=$email;
                     $_SESSION["firstname"]=$firstname;
                     $_SESSION["age"]=$age;
                     $_SESSION["hobbi"]=$hobbi;
                     $_SESSION["lastname"]=$lastname;
                     $_SESSION["genre"]=$genre;
-                    
-                    
+                    http_response_code(200);
+                    echo json_encode(array("type" => "success", "message" => "modification reussi"));
                   
-                  }else{ // sinon
-                      $message="Employé non ajouté";
+                  
                   }
-              } else{ //sinon
-                  $message="Remplisser les champs";
+               else{ //sinon
+                           
+echo json_encode(array("type" => "error", "message" => "remplir tout les champs"));
               }
           
 }

@@ -19,28 +19,32 @@
     
     <div class="user-box">
     <label for="nom">Prénom</label>
-    <input type="text" id="name" name="firstname" >
+    <input type="text" id="name" name="firstname" value="<?=$_SESSION['firstname']?>">
     </div>
    
         <div class="user-box">
         <label for="nom">Nom</label>
-        <input type="text" id="name" name="lastname" >
+        <input type="text" id="name" name="lastname" value="<?=$_SESSION['lastname']?>">
         </div>
         <div class="user-box">
     <label for="nom">Email</label>
-    <input type="text" id="name" name="email" >
+    <input type="text" id="name" name="email" value="<?=$_SESSION['email']?>" >
     </div>
     <div class="user-box">
     <label for="nom">Hobbi</label>
-    <input type="text" id="name" name="hobbi" >
+    <input type="text" id="name" name="hobbi" value="<?=$_SESSION['hobbi']?>">
     </div>
     <div class="user-box">
     <label for="nom">Age</label>
-    <input type="date" id="name" name="age" >
+    <input type="text" id="name" name="age"value="<?=$_SESSION['age']?>" >
     </div>
     <div class="user-box">
     <label for="nom">Genre</label>
-    <input type="text" id="name" name="genre" >
+    <input type="text" id="name" name="genre" value="<?=$_SESSION['genre']?>">
+    </div>
+    <div class="user-box">
+    <label for="nom">City</label>
+    <input type="text" id="name" name="city" value="<?=$_SESSION['city']?>">
     </div>
     <div class="user-box">
     <label for="nom">Mot de passe</label>

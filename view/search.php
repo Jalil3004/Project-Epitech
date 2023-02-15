@@ -1,4 +1,4 @@
-<?php session_start()  ?>
+<?php  session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,18 +44,18 @@
         </div>
       </nav>
 
-
+<!-- <?php require_once('../controler/mainsearch.php')  ?> -->
      
       <form method="post" id="formsearch"  action="">
           
           <div class="title">
             <i class="fas fa-pencil-alt"></i> 
-          <h2>Inscription</h2>
+          <h2>Recherche</h2>
         </div>
         <div class="info">
        
         <label for="genre">Civilite</label>
-        <p><input type="radio" name="genre" value="Homme">Homme
+        <p><input type="radio" name="genre" value="Homme" >Homme
         <input type="radio" name="genre" value="Femme">Femme
         <input type="radio" name="genre" value="Autre">Autre<br>
         
@@ -65,7 +65,7 @@
         <label for="Age">Age</label>
         <p><input type="radio" name="age" value="18-25" >18/25
         <input type="radio" name="age" value="25-35">25/35
-        <input type="radio" name="age" value="35-45">35/45<br>
+        <input type="radio" name="age" value="35-45" >35/45<br>
         <input type="radio" name="age" value="45-200">45+<br>
 
         <label for="Hobbi">Choose a Hobbi:</label>
@@ -85,7 +85,7 @@
        
         <button type="submit"  id="thebtnsearch" name="btnn">Submit</button>
       </form>
-      <<div id="prev" style="float:left;">Prev</div>
+     
 <div id="carousel">
         <?php
  $resultat=$_SESSION['res'];
@@ -115,6 +115,7 @@
 ?>
 
 </div>
+<<div id="prev" style="float:left;">Prev</div>
 <div id="next" style="float:right;">Next</div>
 
 

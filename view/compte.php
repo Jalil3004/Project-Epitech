@@ -47,7 +47,7 @@
         </div>
       </nav>
       <script src="../Ajax/ajaxdelete.js"></script>
-    
+      <button id="deco">  <a href="../view/deco.php">déconnexion</a></button>
  <!-- <?php
 if (isset($_SESSION["email"])){
 
@@ -60,7 +60,7 @@ if (isset($_SESSION["email"])){
 
 
 }
-
+   
 ?> -->
 <!-- <form    action="">
           
@@ -104,6 +104,7 @@ if (isset($_SESSION["email"])){
             <p>Genre: <?=$_SESSION['genre']?> </p><br>
             <p>Email: <?=$_SESSION['email']?> </p><br>
             <p>Hobbi: <?=$_SESSION['hobbi']?> </p><br>
+            <p>city: <?=$_SESSION['city']?> </p><br>
           </div>
           
           <button class="btn draw-border"><a href="edit.php?id=<?=$_SESSION["email"]?>">Edit</a></button>

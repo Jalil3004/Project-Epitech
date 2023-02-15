@@ -26,11 +26,21 @@
         data:str,
         success:function(response){
         
-        
+          let thetype = JSON.parse(response);
+          
+          if(thetype.type=='success'){
+            // alert(str.error.message);
+           alert (thetype.message);
+           
+           location.href='../view/compte.php';
+          }
+          else{
+            
+            alert (thetype.message);
+          }
            // alert(str.error.message);
          
-        
-           location.href='../view/compte.php';
+       
        
  
          //  diva.html(response);
