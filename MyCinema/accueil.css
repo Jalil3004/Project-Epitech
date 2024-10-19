@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: aliceblue;
+    margin-top: 100px;
+    text-align: center;
+}
+
+td{
+    color: aliceblue;
+}
+
+.bg-black {
+    --bs-bg-opacity: 0 !important;
+}
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.73;
+    }
+.rech{
+       text-align: center;
+      margin-top: 200px;
+     
+     
+    
+       
+    }
+
+.rech input{
+    width: 400px;
+    height: 50px;
+    
+}
+
+#sub{
+    height: 40px;
+    width: 100px;
+background-color: rgb(165, 76, 76);
+
+}
+
+label{
+    color: aliceblue;
+}
