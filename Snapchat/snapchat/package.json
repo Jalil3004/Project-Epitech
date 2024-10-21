@@ -1,0 +1,32 @@
+{
+  "name": "awesomeproject",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.18.2",
+    "@react-navigation/native": "^6.1.6",
+    "@react-navigation/stack": "^6.3.16",
+    "expo": "~48.0.18",
+    "expo-camera": "~13.2.1",
+    "expo-font": "~11.1.1",
+    "expo-image-picker": "~14.1.1",
+    "expo-media-library": "~15.2.3",
+    "expo-splash-screen": "~0.18.2",
+    "expo-status-bar": "~1.4.4",
+    "react": "18.2.0",
+    "react-native": "0.71.8",
+    "react-native-camera": "^3.16.0",
+    "react-native-splash-screen": "^3.3.0",
+    "react-native-vision-camera": "^2.15.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
