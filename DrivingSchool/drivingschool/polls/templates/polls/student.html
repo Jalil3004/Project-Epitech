@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+  
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>Bonjour, {{ student.user.username }}</h1>
+                        </div>
+                        <div class="card-body">
+                            <h2>Vos Heures de conduites</h2>
+                            <p>Heures payées: {{ student.hours_paid }}</p>
+                            <p>Heures Prises: {{ student.hours_taken }}</p>
+                            <p>Hours Restantes: {{ student.hours_remaining }}</p>
+
+                            <h2>Vos rendez-vous</h2>
+                            <ul>
+                                {% for appointment in appointments %}
+                                    <li>{{ appointment.date }} - {{ appointment.instructor.username }} - {{ appointment.location }}</li>
+                                {% empty %}
+                                    <li>Pas de rendez-vous.</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+</html>

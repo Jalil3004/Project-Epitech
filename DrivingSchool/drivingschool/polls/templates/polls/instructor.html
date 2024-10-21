@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instructor Dashboard</title>
+</head>
+<body>
+    <h1>Instructor Dashboard</h1>
+
+    <h2>Mes rendez-vous</h2>
+    <ul>
+        {% for appointment in appointments %}
+            <li>{{ appointment.date }} - {{ appointment.location }} - {{ appointment.student.user.username }}</li>
+        {% empty %}
+            <li>No appointments scheduled.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Créer un rendez-vous</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
