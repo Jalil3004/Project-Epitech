@@ -1,0 +1,5 @@
+<h1>New Step for <%= @quest.name %></h1>
+
+<%= render 'form', quest: @quest, step: @step %>
+
+<%= link_to 'Back to Steps', quest_steps_path(@quest) %>

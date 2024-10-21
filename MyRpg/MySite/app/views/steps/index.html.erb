@@ -1,0 +1,26 @@
+<h1>Steps for <%= @quest.name %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @steps.each do |step| %>
+      <tr>
+        <td><%= step.description %></td>
+        <td><%= step.order %></td>
+        <td><%= link_to 'Show', [@quest, step] %></td>
+        <td><%= link_to 'Edit', edit_quest_step_path(@quest, step) %></td>
+        <td><%= link_to 'Destroy', [@quest, step], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Step', new_quest_step_path(@quest) %> |
+<%= link_to 'Back to Quests', quests_path %>

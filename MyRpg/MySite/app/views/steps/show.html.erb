@@ -1,0 +1,14 @@
+<h1>Step Details for <%= @quest.name %></h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @step.description %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @step.order %>
+</p>
+
+<%= link_to 'Edit', edit_quest_step_path(@quest, @step) %> |
+<%= link_to 'Back to Steps', quest_steps_path(@quest) %>
